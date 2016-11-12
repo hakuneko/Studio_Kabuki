@@ -6,20 +6,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class TopScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_top_screen);
 
-        Button playGame = (Button)findViewById(R.id.playGame);
+        Button playGame = (Button)findViewById(R.id.startButton);
         playGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Go to Play screen
                 Intent intent = new Intent();
-                intent.setClassName("com.example.owner.slot","com.example.owner.slot.SubActivity");
+                intent.setClassName("com.example.owner.slot","com.example.owner.slot.GameMainActivity");
                 startActivity(intent);
             }
         });
